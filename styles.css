@@ -10,7 +10,11 @@
 body {
   background-color: #FFFFFF;
   color: #001F3F;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 
 a {
   text-decoration: none;
@@ -1103,3 +1107,60 @@ footer p {
   background: linear-gradient(rgba(140, 24, 88, 0.7), rgba(0, 31, 63, 0.7)),
               url('https://images.unsplash.com/photo-1555066931-4365d14bab8c') center/cover no-repeat;
 }
+
+
+
+
+/* ====== FOOTER ====== */
+footer {
+  background-color: #001F3F;
+  color: #FFFFFF;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #8C1858;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #FFFFFF;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+/* Links del footer */
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.footer-links a:hover {
+  background-color: #8C1858;
+  color: #FFFFFF;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
