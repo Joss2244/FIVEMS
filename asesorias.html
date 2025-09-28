@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIVEMS - Asesorías y Tutorías</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo-container">
+      <img src="FIVEMS.jpg" alt="Logo FIVEMS">
+      <div class="logo-text">FIVEMS</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="FIVEMS.HTML">Inicio</a></li>
+        <li><a href="kiosko.html">Kiosko Digital</a></li>
+        <li><a href="asesorias.html">Asesorías</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="oportunidades.html">Oportunidades</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="donaciones.html" class="active">Donaciones</a></li>
+      </ul>
+    </nav>
+    <div>
+      <a href="registro.html"><button class="btn btn-guinda">Registrarse</button></a>
+      <a href="login.html"><button class="btn btn-guinda">Iniciar Sesión</button></a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero hero-asesorias">
+    <h1>Asesorías y Tutorías Personalizadas</h1>
+    <p>Encuentra el apoyo académico que necesitas. Asigna un tutor y solicita asesorías entre pares para mejorar tu rendimiento escolar.</p>
+  </section>
+
+  <!-- ===== SECCIÓN DE DESCRIPCIÓN ===== -->
+  <section class="asesorias-descripcion">
+    <div class="descripcion-texto">
+      <h2>¿Cómo funciona?</h2>
+      <p>
+        Nuestro sistema te conecta con estudiantes avanzados y tutores capacitados para apoyarte en las materias que se te dificultan.
+        Podrás agendar sesiones personalizadas, consultar material de estudio y medir tu progreso académico.
+      </p>
+      <ul>
+        <li>Asesorías entre pares por materia.</li>
+        <li>Asignación de tutor personalizado.</li>
+        <li>Seguimiento académico continuo.</li>
+        <li>Recursos digitales y guías gratuitas.</li>
+      </ul>
+    </div>
+    <img src="asesorias.png" alt="Tutorías en FIVEMS">
+  </section>
+
+  <!-- ===== FORMULARIO PARA SOLICITAR ASESORÍA ===== -->
+  <section class="registro">
+    <h2>Solicita tu Asesoría</h2>
+    <form>
+      <!-- Número de boleta -->
+      <div class="form-group">
+        <label for="boleta">Número de Boleta</label>
+        <input type="text" id="boleta" name="boleta" placeholder="Introduce tu número de boleta" required>
+      </div>
+
+      <!-- Nombre completo -->
+      <div class="form-group">
+        <label for="nombre">Nombre Completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+      </div>
+
+      <!-- Escuela -->
+      <div class="form-group">
+        <label for="escuela">Escuela</label>
+        <select id="escuela" name="escuela" required>
+          <option value="">Selecciona tu escuela</option>
+        <optgroup label="CECyT">
+          <option value="CECyT 1">CECyT No. 1 Gonzalo Vázquez Vela</option>
+          <option value="CECyT 2">CECyT No. 2 Miguel Bernard</option>
+          <option value="CECyT 3">CECyT No. 3 Estanislao Ramírez Ruiz</option>
+          <option value="CECyT 4">CECyT No. 4 Lázaro Cárdenas</option>
+          <option value="CECyT 5">CECyT No. 5 Benito Juárez</option>
+          <option value="CECyT 6">CECyT No. 6 Miguel Othón de Mendizábal</option>
+          <option value="CECyT 7">CECyT No. 7 Cuauhtémoc</option>
+          <option value="CECyT 8">CECyT No. 8 Narciso Bassols</option>
+          <option value="CECyT 9">CECyT No. 9 Juan de Dios Bátiz</option>
+          <option value="CECyT 10">CECyT No. 10 Carlos Vallejo Márquez</option>
+          <option value="CECyT 11">CECyT No. 11 Wilfrido Massieu</option>
+          <option value="CECyT 12">CECyT No. 12 José María Morelos</option>
+          <option value="CECyT 13">CECyT No. 13 Ricardo Flores Magón</option>
+          <option value="CECyT 14">CECyT No. 14 Luis Enrique Erro</option>
+          <option value="CECyT 15">CECyT No. 15 Diódoro Antúnez Echegaray</option>
+          <option value="CECyT 16">CECyT No. 16 Hidalgo</option>
+          <option value="CECyT 17">CECyT No. 17 León, Guanajuato</option>
+          <option value="CECyT 18">CECyT No. 18 Zacatecas</option>
+          <option value="CECyT 19">CECyT No. 19 Leona Vicario</option>
+          <option value="CECyT 20">CECyT No. 20 Natalia Serdán Alatriste</option>
+          <option value="CET 1">CET 1 Walter Cross Buchanan</option>
+        </optgroup>
+        </select>
+      </div>
+
+      <!-- Materia -->
+      <div class="form-group">
+        <label for="materia">Materia</label>
+        <select id="materia" name="materia" required>
+          <option value="">Selecciona la materia</option>
+          <option>Matemáticas</option>
+          <option>Física</option>
+          <option>Química</option>
+          <option>Biología</option>
+          <option>Programación</option>
+          <option>Inglés</option>
+          <option>Historia</option>
+          <option>Filosofía</option>
+        </select>
+      </div>
+
+      <!-- Tipo de asesoría -->
+      <div class="form-group">
+        <label for="tipo">Tipo de Asesoría</label>
+        <select id="tipo" name="tipo" required>
+          <option value="">Selecciona el tipo</option>
+          <option>Asesoría entre pares</option>
+          <option>Tutoría personalizada</option>
+          <option>Sesión grupal</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-guinda">Solicitar Asesoría</button>
+    </form>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 FIVEMS - Fundación de Integración Virtual Escolar de Media Superior.</p>
+    <p>Contacto: <a href="mailto:contacto@sivems.mx">contacto@sivems.mx</a></p>
+  </footer>
+
+</body>
+</html>

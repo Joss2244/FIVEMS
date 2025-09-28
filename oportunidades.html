@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIVEMS - Bolsa de Oportunidades</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo-container">
+      <img src="FIVEMS.jpg" alt="Logo FIVEMS">
+      <div class="logo-text">FIVEMS</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="FIVEMS.HTML">Inicio</a></li>
+        <li><a href="kiosko.html">Kiosko Digital</a></li>
+        <li><a href="asesorias.html">Asesorías</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="oportunidades.html">Oportunidades</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="donaciones.html" class="active">Donaciones</a></li>
+      </ul>
+    </nav>
+    <div>
+      <a href="registro.html"><button class="btn btn-guinda">Registrarse</button></a>
+      <a href="login.html"><button class="btn btn-guinda">Iniciar Sesión</button></a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <h1>Bolsa de Oportunidades</h1>
+    <p>Encuentra empleos, prácticas profesionales y becas para estudiantes de nivel medio superior.</p>
+  </section>
+
+  <!-- ===== FILTROS DE BÚSQUEDA ===== -->
+  <section class="filtros">
+    <h2>Busca tu oportunidad</h2>
+    <form class="filtros-form">
+      <input type="text" placeholder="Buscar por palabra clave...">
+      <select>
+        <option value="">Tipo de Oportunidad</option>
+        <option value="empleo">Empleo</option>
+        <option value="practica">Práctica Profesional</option>
+        <option value="beca">Beca</option>
+      </select>
+      <select>
+        <option value="">Ubicación</option>
+        <option value="cdmx">Ciudad de México</option>
+        <option value="edomex">Estado de México</option>
+        <option value="hidalgo">Hidalgo</option>
+      </select>
+      <button class="btn btn-guinda" type="submit">Buscar</button>
+    </form>
+  </section>
+
+<!-- ===== LISTA DE VACANTES AMPLIADA ===== -->
+<section class="vacantes">
+  <h2>Oportunidades Disponibles</h2>
+<div class="vacantes-lista" id="vacantes-lista">
+    <!-- Vacante 1 -->
+    <div class="vacante-card" data-tipo="empleo" data-ubicacion="cdmx">
+      <h3>Auxiliar Administrativo</h3>
+      <p class="empresa">Grupo Politécnico</p>
+      <p class="ubicacion">CDMX</p>
+      <p class="descripcion">Apoyo en gestión de documentos y atención a estudiantes. Ideal para interesados en administración.</p>
+      <p class="tipo">Empleo</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 2 -->
+    <div class="vacante-card" data-tipo="practica" data-ubicacion="hidalgo">
+      <h3>Prácticas en Laboratorio de Física</h3>
+      <p class="empresa">IPN - CECyT 6</p>
+      <p class="ubicacion">Hidalgo</p>
+      <p class="descripcion">Apoyo en preparación de experimentos y materiales en el área de física. Experiencia no necesaria.</p>
+      <p class="tipo">Práctica Profesional</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 3 -->
+    <div class="vacante-card" data-tipo="beca" data-ubicacion="edomex">
+      <h3>Beca de Transporte</h3>
+      <p class="empresa">Programa SIVEMS</p>
+      <p class="ubicacion">Estado de México</p>
+      <p class="descripcion">Apoyo económico mensual para transporte a estudiantes con necesidad comprobada.</p>
+      <p class="tipo">Beca</p>
+      <button class="btn btn-guinda">Solicitar</button>
+    </div>
+
+    <!-- Vacante 4 -->
+    <div class="vacante-card" data-tipo="empleo" data-ubicacion="edomex">
+      <h3>Asistente de Marketing Digital</h3>
+      <p class="empresa">Media Creativa</p>
+      <p class="ubicacion">Estado de México</p>
+      <p class="descripcion">Apoyo en redes sociales, creación de contenido y análisis de métricas. Ideal para estudiantes de marketing.</p>
+      <p class="tipo">Empleo</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 5 -->
+    <div class="vacante-card" data-tipo="practica" data-ubicacion="cdmx">
+      <h3>Prácticas en Desarrollo Web</h3>
+      <p class="empresa">TecnoCode</p>
+      <p class="ubicacion">CDMX</p>
+      <p class="descripcion">Participa en proyectos front-end y back-end. Se valoran conocimientos básicos de HTML, CSS y JS.</p>
+      <p class="tipo">Práctica Profesional</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 6 -->
+    <div class="vacante-card" data-tipo="beca" data-ubicacion="hidalgo">
+      <h3>Beca de Material Didáctico</h3>
+      <p class="empresa">Programa SIVEMS</p>
+      <p class="ubicacion">Hidalgo</p>
+      <p class="descripcion">Apoyo económico para libros y materiales de estudio para estudiantes de alto rendimiento.</p>
+      <p class="tipo">Beca</p>
+      <button class="btn btn-guinda">Solicitar</button>
+    </div>
+
+    <!-- Vacante 7 -->
+    <div class="vacante-card" data-tipo="empleo" data-ubicacion="cdmx">
+      <h3>Asistente en Biblioteca Digital</h3>
+      <p class="empresa">Biblioteca IPN</p>
+      <p class="ubicacion">CDMX</p>
+      <p class="descripcion">Ayuda en catalogación, préstamo y digitalización de recursos. Manejo básico de herramientas digitales.</p>
+      <p class="tipo">Empleo</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 8 -->
+    <div class="vacante-card" data-tipo="practica" data-ubicacion="edomex">
+      <h3>Prácticas en Laboratorio de Química</h3>
+      <p class="empresa">IPN - CECyT 2</p>
+      <p class="ubicacion">Estado de México</p>
+      <p class="descripcion">Colaboración en experimentos y mantenimiento de materiales químicos. Ideal para estudiantes de química y biología.</p>
+      <p class="tipo">Práctica Profesional</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 9 -->
+    <div class="vacante-card" data-tipo="beca" data-ubicacion="cdmx">
+      <h3>Beca de Computación</h3>
+      <p class="empresa">Programa TechIPN</p>
+      <p class="ubicacion">CDMX</p>
+      <p class="descripcion">Beca mensual para estudiantes que necesiten equipo de cómputo y software educativo.</p>
+      <p class="tipo">Beca</p>
+      <button class="btn btn-guinda">Solicitar</button>
+    </div>
+
+    <!-- Vacante 10 -->
+    <div class="vacante-card" data-tipo="empleo" data-ubicacion="hidalgo">
+      <h3>Auxiliar en Taller de Robótica</h3>
+      <p class="empresa">Robotech Hidalgo</p>
+      <p class="ubicacion">Hidalgo</p>
+      <p class="descripcion">Apoyo en montaje de proyectos y mantenimiento de robots educativos. Ideal para estudiantes de electrónica.</p>
+      <p class="tipo">Empleo</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 11 -->
+    <div class="vacante-card" data-tipo="practica" data-ubicacion="cdmx">
+      <h3>Prácticas en Diseño Gráfico</h3>
+      <p class="empresa">Estudio Creativo MX</p>
+      <p class="ubicacion">CDMX</p>
+      <p class="descripcion">Apoyo en creación de material visual para redes sociales y publicidad digital.</p>
+      <p class="tipo">Práctica Profesional</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 12 -->
+    <div class="vacante-card" data-tipo="beca" data-ubicacion="edomex">
+      <h3>Beca de Investigación Científica</h3>
+      <p class="empresa">IPN - Centro de Investigación</p>
+      <p class="ubicacion">Estado de México</p>
+      <p class="descripcion">Beca para estudiantes que colaboren en proyectos de investigación en ciencias exactas.</p>
+      <p class="tipo">Beca</p>
+      <button class="btn btn-guinda">Solicitar</button>
+    </div>
+
+    <!-- Vacante 13 -->
+    <div class="vacante-card" data-tipo="empleo" data-ubicacion="cdmx">
+      <h3>Asistente en Centro de Salud Escolar</h3>
+      <p class="empresa">CECyT IPN</p>
+      <p class="ubicacion">CDMX</p>
+      <p class="descripcion">Apoyo en atención a estudiantes, control de citas y seguimiento médico básico.</p>
+      <p class="tipo">Empleo</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 14 -->
+    <div class="vacante-card" data-tipo="practica" data-ubicacion="hidalgo">
+      <h3>Prácticas en Laboratorio de Biología</h3>
+      <p class="empresa">IPN - CECyT 7</p>
+      <p class="ubicacion">Hidalgo</p>
+      <p class="descripcion">Apoyo en preparación de experimentos biológicos y análisis de muestras.</p>
+      <p class="tipo">Práctica Profesional</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 15 -->
+    <div class="vacante-card" data-tipo="beca" data-ubicacion="cdmx">
+      <h3>Beca de Apoyo Cultural</h3>
+      <p class="empresa">Secretaría de Cultura IPN</p>
+      <p class="ubicacion">CDMX</p>
+      <p class="descripcion">Apoyo a estudiantes para cursos y talleres artísticos y culturales.</p>
+      <p class="tipo">Beca</p>
+      <button class="btn btn-guinda">Solicitar</button>
+    </div>
+
+    <!-- Vacante 16 -->
+    <div class="vacante-card" data-tipo="empleo" data-ubicacion="edomex">
+      <h3>Asistente de Laboratorio de Mecánica</h3>
+      <p class="empresa">IPN - CECyT 3</p>
+      <p class="ubicacion">Estado de México</p>
+      <p class="descripcion">Apoyo en montaje y supervisión de prácticas de mecánica y materiales.</p>
+      <p class="tipo">Empleo</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 17 -->
+    <div class="vacante-card" data-tipo="practica" data-ubicacion="cdmx">
+      <h3>Prácticas en Periodismo Digital</h3>
+      <p class="empresa">IPN Noticias</p>
+      <p class="ubicacion">CDMX</p>
+      <p class="descripcion">Apoyo en redacción, edición y difusión de noticias en medios digitales.</p>
+      <p class="tipo">Práctica Profesional</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 18 -->
+    <div class="vacante-card" data-tipo="beca" data-ubicacion="hidalgo">
+      <h3>Beca Deportiva</h3>
+      <p class="empresa">CECyT IPN</p>
+      <p class="ubicacion">Hidalgo</p>
+      <p class="descripcion">Beca para estudiantes destacados en deportes, apoyo en equipo y transporte a competencias.</p>
+      <p class="tipo">Beca</p>
+      <button class="btn btn-guinda">Solicitar</button>
+    </div>
+
+    <!-- Vacante 19 -->
+    <div class="vacante-card" data-tipo="empleo" data-ubicacion="cdmx">
+      <h3>Auxiliar en Taller de Artes Visuales</h3>
+      <p class="empresa">Escuela de Artes IPN</p>
+      <p class="ubicacion">CDMX</p>
+      <p class="descripcion">Apoyo en organización de talleres y mantenimiento de materiales de arte.</p>
+      <p class="tipo">Empleo</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 20 -->
+    <div class="vacante-card" data-tipo="practica" data-ubicacion="edomex">
+      <h3>Prácticas en Laboratorio de Energías Renovables</h3>
+      <p class="empresa">Centro de Innovación Tecnológica</p>
+      <p class="ubicacion">Estado de México</p>
+      <p class="descripcion">Apoyo en proyectos de energía solar y eólica. Ideal para estudiantes de ingeniería.</p>
+      <p class="tipo">Práctica Profesional</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 21 -->
+    <div class="vacante-card" data-tipo="beca" data-ubicacion="cdmx">
+      <h3>Beca de Idiomas</h3>
+      <p class="empresa">IPN - Centro de Idiomas</p>
+      <p class="ubicacion">CDMX</p>
+      <p class="descripcion">Apoyo económico para cursos de inglés, francés, alemán y japonés.</p>
+      <p class="tipo">Beca</p>
+      <button class="btn btn-guinda">Solicitar</button>
+    </div>
+
+    <!-- Vacante 22 -->
+    <div class="vacante-card" data-tipo="empleo" data-ubicacion="hidalgo">
+      <h3>Auxiliar en Centro de Computo</h3>
+      <p class="empresa">IPN - CECyT 8</p>
+      <p class="ubicacion">Hidalgo</p>
+      <p class="descripcion">Apoyo en mantenimiento de equipos, instalación de software y atención a usuarios.</p>
+      <p class="tipo">Empleo</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 23 -->
+    <div class="vacante-card" data-tipo="practica" data-ubicacion="cdmx">
+      <h3>Prácticas en Producción Audiovisual</h3>
+      <p class="empresa">IPN TV</p>
+      <p class="ubicacion">CDMX</p>
+      <p class="descripcion">Apoyo en grabación, edición y producción de contenidos audiovisuales.</p>
+      <p class="tipo">Práctica Profesional</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 24 -->
+    <div class="vacante-card" data-tipo="beca" data-ubicacion="edomex">
+      <h3>Beca de Alimentación</h3>
+      <p class="empresa">Programa Social IPN</p>
+      <p class="ubicacion">Estado de México</p>
+      <p class="descripcion">Apoyo económico mensual para estudiantes en situación vulnerable para alimentación.</p>
+      <p class="tipo">Beca</p>
+      <button class="btn btn-guinda">Solicitar</button>
+    </div>
+
+    <!-- Vacante 25 -->
+    <div class="vacante-card" data-tipo="empleo" data-ubicacion="cdmx">
+      <h3>Asistente en Laboratorio de Química Analítica</h3>
+      <p class="empresa">IPN - CINVESTAV</p>
+      <p class="ubicacion">CDMX</p>
+      <p class="descripcion">Apoyo en preparación de reactivos, análisis de muestras y control de inventarios.</p>
+      <p class="tipo">Empleo</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 26 -->
+    <div class="vacante-card" data-tipo="practica" data-ubicacion="hidalgo">
+      <h3>Prácticas en Laboratorio de Electrónica</h3>
+      <p class="empresa">IPN - CECyT 5</p>
+      <p class="ubicacion">Hidalgo</p>
+      <p class="descripcion">Apoyo en diseño de circuitos y mantenimiento de equipos electrónicos.</p>
+      <p class="tipo">Práctica Profesional</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 27 -->
+    <div class="vacante-card" data-tipo="beca" data-ubicacion="cdmx">
+      <h3>Beca de Transporte y Materiales</h3>
+      <p class="empresa">IPN - Programa Social</p>
+      <p class="ubicacion">CDMX</p>
+      <p class="descripcion">Apoyo para transporte y materiales de estudio para estudiantes con necesidad económica.</p>
+      <p class="tipo">Beca</p>
+      <button class="btn btn-guinda">Solicitar</button>
+    </div>
+
+    <!-- Vacante 28 -->
+    <div class="vacante-card" data-tipo="empleo" data-ubicacion="edomex">
+      <h3>Asistente de Laboratorio de Física Aplicada</h3>
+      <p class="empresa">IPN - CECyT 1</p>
+      <p class="ubicacion">Estado de México</p>
+      <p class="descripcion">Apoyo en experimentos, montaje y supervisión de prácticas de laboratorio de física.</p>
+      <p class="tipo">Empleo</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 29 -->
+    <div class="vacante-card" data-tipo="practica" data-ubicacion="cdmx">
+      <h3>Prácticas en Inteligencia Artificial</h3>
+      <p class="empresa">IPN - Centro de Innovación Tecnológica</p>
+      <p class="ubicacion">CDMX</p>
+      <p class="descripcion">Participa en proyectos de IA y aprendizaje automático. Ideal para estudiantes de ingeniería en computación.</p>
+      <p class="tipo">Práctica Profesional</p>
+      <button class="btn btn-guinda">Postularme</button>
+    </div>
+
+    <!-- Vacante 30 -->
+    <div class="vacante-card" data-tipo="beca" data-ubicacion="hidalgo">
+      <h3>Beca de Excelencia Académica</h3>
+      <p class="empresa">IPN - Programa Social</p>
+      <p class="ubicacion">Hidalgo</p>
+      <p class="descripcion">Beca para estudiantes con alto rendimiento académico, apoyo económico mensual y materiales de estudio.</p>
+      <p class="tipo">Beca</p>
+      <button class="btn btn-guinda">Solicitar</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- ===== INFO FINAL ===== -->
+  <!-- ===== SCRIPT ===== -->
+ <script>
+  const filtroForm = document.querySelector('.filtros-form');
+  const vacantesLista = document.getElementById('vacantes-lista');
+  const vacantes = Array.from(vacantesLista.children);
+
+  filtroForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const palabraClave = filtroForm.querySelector('input').value.toLowerCase();
+    const [tipoSeleccionado, ubicacionSeleccionada] = Array.from(filtroForm.querySelectorAll('select')).map(s => s.value);
+
+    vacantes.forEach(v => {
+      const titulo = v.querySelector('h3').textContent.toLowerCase();
+      const descripcion = v.querySelector('.descripcion').textContent.toLowerCase();
+      const tipo = v.dataset.tipo;
+      const ubicacion = v.dataset.ubicacion;
+
+      const coincidePalabra = palabraClave === "" || titulo.includes(palabraClave) || descripcion.includes(palabraClave);
+      const coincideTipo = !tipoSeleccionado || tipo === tipoSeleccionado;
+      const coincideUbicacion = !ubicacionSeleccionada || ubicacion === ubicacionSeleccionada;
+
+      v.style.display = (coincidePalabra && coincideTipo && coincideUbicacion) ? 'block' : 'none';
+    });
+  });
+</script>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 FIVEMS - Fundación de Integración Virtual Escolar de Media Superior. Diseñado para el <strong>IPN</strong>.</p>
+    <p>Contacto: <a href="mailto:contacto@sivems.mx">contacto@sivems.mx</a></p>
+  </footer>
+</body>
+</html>

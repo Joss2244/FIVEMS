@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIVEMS - Donaciones</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header>
+    <div class="logo-container">
+      <img src="FIVEMS.jpg" alt="Logo FIVEMS">
+      <div class="logo-text">FIVEMS</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="FIVEMS.HTML">Inicio</a></li>
+        <li><a href="kiosko.html">Kiosko Digital</a></li>
+        <li><a href="asesorias.html">Asesorías</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="oportunidades.html">Oportunidades</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="donaciones.html" class="active">Donaciones</a></li>
+      </ul>
+    </nav>
+
+    <div>
+      <a href="Registro.html"><button class="btn btn-guinda">Registrarse</button></a>
+      <a href="login.html"><button class="btn btn-guinda">Iniciar Sesión</button></a>
+    </div>
+  </header>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero">
+    <h1>Contribuye a FIVEMS</h1>
+    <p>Tu apoyo puede transformar la vida de muchos estudiantes. Dona materiales escolares, dispositivos tecnológicos, ropa o contribuciones económicas.</p>
+    <a href="#form-donaciones"><button class="btn btn-guinda">Realiza tu Donación</button></a>
+  </section>
+
+  <!-- ====== FORMULARIO DE DONACIONES ====== -->
+  <section class="registro" id="form-donaciones">
+    <h2>Formulario de Donaciones</h2>
+    <form class="form-registro" action="#" method="POST">
+      <div class="form-group">
+        <label for="nombre">Nombre Completo</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="correo">Correo Electrónico</label>
+        <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="tipo-donacion">Tipo de Donación</label>
+        <select id="tipo-donacion" name="tipo-donacion" required>
+          <option value="">Selecciona el tipo de donación</option>
+          <option value="economica">Económica</option>
+          <option value="material-escolar">Útiles Escolares</option>
+          <option value="dispositivos">Dispositivos Tecnológicos</option>
+          <option value="ropa">Ropa</option>
+        </select>
+      </div>
+
+      <!-- Contenedor dinámico según tipo de donación -->
+      <div id="opciones-dinamicas"></div>
+
+      <div class="form-group">
+        <label for="fecha">Fecha de Entrega</label>
+        <input type="date" id="fecha" name="fecha" required>
+      </div>
+
+      <button type="submit" class="btn btn-guinda">Enviar Donación</button>
+    </form>
+  </section>
+
+  <!-- ====== BENEFICIOS DE DONAR ====== -->
+  <section class="beneficios">
+    <h2>¿Por qué donar?</h2>
+    <div class="beneficios-container">
+      <div class="beneficio-card">
+        <h3>Impacto Educativo</h3>
+        <p>Ayuda a estudiantes de bajos recursos a continuar con su educación y alcanzar sus metas.</p>
+      </div>
+      <div class="beneficio-card">
+        <h3>Responsabilidad Social</h3>
+        <p>Contribuye al bienestar de la comunidad y fomenta valores de solidaridad y empatía.</p>
+      </div>
+      <div class="beneficio-card">
+        <h3>Sostenibilidad</h3>
+        <p>Reutiliza recursos tecnológicos y materiales, apoyando la economía circular.</p>
+      </div>
+      <div class="beneficio-card">
+        <h3>Reconocimiento</h3>
+        <p>Recibe agradecimientos y certificaciones por tu apoyo a FIVEMS.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer>
+    <p>&copy; 2025 FIVEMS - Fundación de Integración Virtual Escolar de Media Superior. Diseñado para el <strong>IPN</strong>.</p>
+    <p>Contacto: <a href="mailto:contacto@sivems.mx">contacto@sivems.mx</a></p>
+  </footer>
+
+  <!-- ====== SCRIPT ====== -->
+  <script>
+    const tipoDonacion = document.getElementById('tipo-donacion');
+    const opcionesDinamicas = document.getElementById('opciones-dinamicas');
+
+    tipoDonacion.addEventListener('change', () => {
+      const valor = tipoDonacion.value;
+      opcionesDinamicas.innerHTML = ''; // Limpiar opciones previas
+
+      if (valor === 'economica') {
+        opcionesDinamicas.innerHTML = `
+          <div class="form-group">
+            <label for="monto">Monto de la Donación ($)</label>
+            <input type="number" id="monto" name="monto" min="0" placeholder="Ej. 500" required>
+          </div>
+          <div class="form-group">
+            <label for="frecuencia">Frecuencia de la Donación</label>
+            <select id="frecuencia" name="frecuencia" required>
+              <option value="">Selecciona</option>
+              <option value="una-vez">Una vez</option>
+              <option value="mensual">Mensual</option>
+              <option value="anual">Anual</option>
+            </select>
+          </div>
+        `;
+      } else if (valor === 'ropa') {
+        opcionesDinamicas.innerHTML = `
+          <div class="form-group">
+            <label for="estado">Estado de la Ropa</label>
+            <select id="estado" name="estado" required>
+              <option value="">Selecciona</option>
+              <option value="nuevo">Nuevo</option>
+              <option value="semi-nuevo">Semi-nuevo</option>
+              <option value="usado">Usado</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tipo-ropa">Tipo de Ropa</label>
+            <select id="tipo-ropa" name="tipo-ropa" required>
+              <option value="">Selecciona</option>
+              <option value="camisa">Camisa</option>
+              <option value="pantalon">Pantalón</option>
+              <option value="zapatos">Zapatos</option>
+              <option value="accesorios">Accesorios</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="talla">Talla</label>
+            <input type="text" id="talla" name="talla" placeholder="Ej. M, 32, 40" required>
+          </div>
+        `;
+      } else if (valor === 'material-escolar') {
+        opcionesDinamicas.innerHTML = `
+          <div class="form-group">
+            <label for="tipo-util">Tipo de Útil</label>
+            <select id="tipo-util" name="tipo-util" required>
+              <option value="">Selecciona</option>
+              <option value="cuadernos">Cuadernos</option>
+              <option value="lápices">Lápices</option>
+              <option value="mochilas">Mochilas</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="cantidad">Cantidad</label>
+            <input type="number" id="cantidad" name="cantidad" min="0" placeholder="Ej. 10" required>
+          </div>
+        `;
+      } else if (valor === 'dispositivos') {
+        opcionesDinamicas.innerHTML = `
+          <div class="form-group">
+            <label for="tipo-dispositivo">Tipo de Dispositivo</label>
+            <select id="tipo-dispositivo" name="tipo-dispositivo" required>
+              <option value="">Selecciona</option>
+              <option value="laptop">Laptop</option>
+              <option value="tablet">Tablet</option>
+              <option value="celular">Celular</option>
+              <option value="otros">Otros</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="marca">Marca</label>
+            <input type="text" id="marca" name="marca" placeholder="Ej. HP, Samsung" required>
+          </div>
+        `;
+      }
+    });
+  </script>
+
+</body>
+</html>

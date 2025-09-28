@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIVEMS - Recursos Académicos</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo-container">
+      <img src="FIVEMS.jpg" alt="Logo FIVEMS">
+      <div class="logo-text">FIVEMS</div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="FIVEMS.HTML">Inicio</a></li>
+        <li><a href="kiosko.html">Kiosko Digital</a></li>
+        <li><a href="asesorias.html">Asesorías</a></li>
+        <li><a href="eventos.html">Eventos</a></li>
+        <li><a href="oportunidades.html">Oportunidades</a></li>
+        <li><a href="recursos.html">Recursos</a></li>
+        <li><a href="donaciones.html" class="active">Donaciones</a></li>
+      </ul>
+    </nav>
+    <div>
+      <a href="registro.html"><button class="btn btn-guinda">Registrarse</button></a>
+      <a href="login.html"><button class="btn btn-guinda">Iniciar Sesión</button></a>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <h1>Recursos Académicos</h1>
+    <p>Accede a guías, materiales y recursos por materia para potenciar tu aprendizaje en nivel medio superior.</p>
+  </section>
+
+  <!-- ===== FILTROS DE MATERIAS ===== -->
+  <section class="filtros">
+    <h2>Filtra por materia</h2>
+    <form class="filtros-form">
+      <input type="text" placeholder="Buscar por palabra clave...">
+      <select>
+        <option value="">Selecciona una materia</option>
+        <option value="matematicas">Matemáticas</option>
+        <option value="fisica">Física</option>
+        <option value="quimica">Química</option>
+        <option value="biologia">Biología</option>
+        <option value="informatica">Informática</option>
+        <option value="historia">Historia</option>
+      </select>
+      <button class="btn btn-guinda" type="submit">Filtrar</button>
+    </form>
+  </section>
+
+  <!-- ===== RECURSOS ===== -->
+<section class="recursos">
+  <h2>Materiales Disponibles</h2>
+  <div class="recursos-lista" id="recursos-lista">
+    <!-- Recurso 1 -->
+    <div class="recurso-card" data-materia="fisica" data-tipo="pdf">
+      <h3>Guía de Física - Cinemática</h3>
+      <p class="materia">Materia: Física</p>
+      <p class="descripcion">Guía completa con teoría, ejemplos y ejercicios prácticos de movimiento rectilíneo.</p>
+      <a href="#" class="btn btn-guinda">Descargar PDF</a>
+    </div>
+
+    <!-- Recurso 2 -->
+    <div class="recurso-card" data-materia="matematicas" data-tipo="pdf">
+      <h3>Ejercicios de Álgebra</h3>
+      <p class="materia">Materia: Matemáticas</p>
+      <p class="descripcion">Serie de ejercicios resueltos y problemas para practicar álgebra de nivel medio superior.</p>
+      <a href="#" class="btn btn-guinda">Descargar PDF</a>
+    </div>
+
+    <!-- Recurso 3 -->
+    <div class="recurso-card" data-materia="quimica" data-tipo="online">
+      <h3>Tabla Periódica Interactiva</h3>
+      <p class="materia">Materia: Química</p>
+      <p class="descripcion">Recurso digital con propiedades de elementos y enlaces químicos para estudio y consulta.</p>
+      <a href="#" class="btn btn-guinda">Acceder Online</a>
+    </div>
+
+    <!-- Recurso 4 -->
+    <div class="recurso-card" data-materia="biologia" data-tipo="online">
+      <h3>Simulador de Biología Celular</h3>
+      <p class="materia">Materia: Biología</p>
+      <p class="descripcion">Simulador interactivo para explorar estructuras celulares y procesos biológicos básicos.</p>
+      <a href="#" class="btn btn-guinda">Acceder Online</a>
+    </div>
+
+    <!-- Recurso 5 -->
+    <div class="recurso-card" data-materia="informatica" data-tipo="video">
+      <h3>Curso de Programación en Python</h3>
+      <p class="materia">Materia: Informática</p>
+      <p class="descripcion">Tutorial completo de Python con ejercicios prácticos y proyectos para principiantes.</p>
+      <a href="#" class="btn btn-guinda">Ver Video</a>
+    </div>
+
+    <!-- Recurso 6 -->
+    <div class="recurso-card" data-materia="historia" data-tipo="pdf">
+      <h3>Resumen de Historia Universal</h3>
+      <p class="materia">Materia: Historia</p>
+      <p class="descripcion">Resumen cronológico de los eventos históricos más importantes desde la Edad Media hasta la actualidad.</p>
+      <a href="#" class="btn btn-guinda">Descargar PDF</a>
+    </div>
+
+    <!-- Recurso 7 -->
+    <div class="recurso-card" data-materia="matematicas" data-tipo="online">
+      <h3>Video Tutorial: Trigonometría</h3>
+      <p class="materia">Materia: Matemáticas</p>
+      <p class="descripcion">Explicación paso a paso de funciones trigonométricas, con ejemplos visuales y ejercicios prácticos.</p>
+      <a href="#" class="btn btn-guinda">Ver Video</a>
+    </div>
+
+    <!-- Recurso 8 -->
+    <div class="recurso-card" data-materia="fisica" data-tipo="pdf">
+      <h3>Problemas Resueltos de Dinámica</h3>
+      <p class="materia">Materia: Física</p>
+      <p class="descripcion">Ejercicios con solución paso a paso sobre fuerzas y movimiento de partículas y cuerpos rígidos.</p>
+      <a href="#" class="btn btn-guinda">Descargar PDF</a>
+    </div>
+
+    <!-- Recurso 9 -->
+    <div class="recurso-card" data-materia="quimica" data-tipo="video">
+      <h3>Experimentos Químicos Caseros</h3>
+      <p class="materia">Materia: Química</p>
+      <p class="descripcion">Demostración de experimentos seguros que ilustran conceptos básicos de química.</p>
+      <a href="#" class="btn btn-guinda">Ver Video</a>
+    </div>
+
+    <!-- Recurso 10 -->
+    <div class="recurso-card" data-materia="informatica" data-tipo="pdf">
+      <h3>Manual de HTML y CSS</h3>
+      <p class="materia">Materia: Informática</p>
+      <p class="descripcion">Guía paso a paso para crear sitios web básicos utilizando HTML y CSS, con ejemplos prácticos.</p>
+      <a href="#" class="btn btn-guinda">Descargar PDF</a>
+    </div>
+
+    <!-- Recurso 11 -->
+    <div class="recurso-card" data-materia="biologia" data-tipo="video">
+      <h3>Videos de Anatomía Humana</h3>
+      <p class="materia">Materia: Biología</p>
+      <p class="descripcion">Serie de videos que explican los sistemas del cuerpo humano y sus funciones principales.</p>
+      <a href="#" class="btn btn-guinda">Ver Video</a>
+    </div>
+
+    <!-- Recurso 12 -->
+    <div class="recurso-card" data-materia="historia" data-tipo="online">
+      <h3>Mapa Interactivo de Civilizaciones</h3>
+      <p class="materia">Materia: Historia</p>
+      <p class="descripcion">Mapa interactivo que permite explorar diferentes civilizaciones y sus características históricas.</p>
+      <a href="#" class="btn btn-guinda">Acceder Online</a>
+    </div>
+
+    <!-- Recurso 13 -->
+    <div class="recurso-card" data-materia="matematicas" data-tipo="pdf">
+      <h3>Guía de Geometría Analítica</h3>
+      <p class="materia">Materia: Matemáticas</p>
+      <p class="descripcion">Teoría y ejercicios de rectas, planos y cónicas con soluciones paso a paso.</p>
+      <a href="#" class="btn btn-guinda">Descargar PDF</a>
+    </div>
+
+    <!-- Recurso 14 -->
+    <div class="recurso-card" data-materia="fisica" data-tipo="video">
+      <h3>Experimentos de Electricidad y Magnetismo</h3>
+      <p class="materia">Materia: Física</p>
+      <p class="descripcion">Videos demostrativos de circuitos, campos magnéticos y leyes de Faraday y Ampère.</p>
+      <a href="#" class="btn btn-guinda">Ver Video</a>
+    </div>
+
+    <!-- Recurso 15 -->
+    <div class="recurso-card" data-materia="quimica" data-tipo="pdf">
+      <h3>Guía de Química Orgánica</h3>
+      <p class="materia">Materia: Química</p>
+      <p class="descripcion">Teoría y ejercicios sobre hidrocarburos, alcoholes, cetonas y ácidos orgánicos.</p>
+      <a href="#" class="btn btn-guinda">Descargar PDF</a>
+    </div>
+
+    <!-- Recurso 16 -->
+    <div class="recurso-card" data-materia="informatica" data-tipo="video">
+      <h3>Introducción a Bases de Datos</h3>
+      <p class="materia">Materia: Informática</p>
+      <p class="descripcion">Videos que enseñan SQL, relaciones y consultas básicas para principiantes.</p>
+      <a href="#" class="btn btn-guinda">Ver Video</a>
+    </div>
+
+    <!-- Recurso 17 -->
+    <div class="recurso-card" data-materia="biologia" data-tipo="pdf">
+      <h3>Guía de Genética</h3>
+      <p class="materia">Materia: Biología</p>
+      <p class="descripcion">Resumen de conceptos de herencia, Mendel, genética molecular y problemas resueltos.</p>
+      <a href="#" class="btn btn-guinda">Descargar PDF</a>
+    </div>
+
+    <!-- Recurso 18 -->
+    <div class="recurso-card" data-materia="historia" data-tipo="video">
+      <h3>Documentales de Historia Contemporánea</h3>
+      <p class="materia">Materia: Historia</p>
+      <p class="descripcion">Serie de documentales sobre guerras, revoluciones y transformaciones sociales modernas.</p>
+      <a href="#" class="btn btn-guinda">Ver Video</a>
+    </div>
+
+    <!-- Recurso 19 -->
+    <div class="recurso-card" data-materia="matematicas" data-tipo="online">
+      <h3>Calculadora de Funciones</h3>
+      <p class="materia">Materia: Matemáticas</p>
+      <p class="descripcion">Herramienta interactiva para graficar y analizar funciones algebraicas y trigonométricas.</p>
+      <a href="#" class="btn btn-guinda">Acceder Online</a>
+    </div>
+
+    <!-- Recurso 20 -->
+    <div class="recurso-card" data-materia="fisica" data-tipo="pdf">
+      <h3>Guía de Termodinámica</h3>
+      <p class="materia">Materia: Física</p>
+      <p class="descripcion">Ejercicios y teoría de energía, calor y leyes de la termodinámica aplicadas a la vida cotidiana.</p>
+      <a href="#" class="btn btn-guinda">Descargar PDF</a>
+    </div>
+
+    <!-- Recurso 21 -->
+    <div class="recurso-card" data-materia="quimica" data-tipo="video">
+      <h3>Videos de Reacciones Químicas</h3>
+      <p class="materia">Materia: Química</p>
+      <p class="descripcion">Demostraciones visuales de reacciones químicas, tipos y aplicaciones prácticas.</p>
+      <a href="#" class="btn btn-guinda">Ver Video</a>
+    </div>
+
+    <!-- Recurso 22 -->
+    <div class="recurso-card" data-materia="informatica" data-tipo="pdf">
+      <h3>Guía de Algoritmos y Estructuras de Datos</h3>
+      <p class="materia">Materia: Informática</p>
+      <p class="descripcion">Resumen teórico y ejercicios prácticos sobre listas, pilas, colas, árboles y algoritmos básicos.</p>
+      <a href="#" class="btn btn-guinda">Descargar PDF</a>
+    </div>
+
+    <!-- Recurso 23 -->
+    <div class="recurso-card" data-materia="biologia" data-tipo="online">
+      <h3>Simulador de Ecosistemas</h3>
+      <p class="materia">Materia: Biología</p>
+      <p class="descripcion">Explora interacciones entre especies, cadenas alimenticias y ciclos de nutrientes en un ecosistema virtual.</p>
+      <a href="#" class="btn btn-guinda">Acceder Online</a>
+    </div>
+
+    <!-- Recurso 24 -->
+    <div class="recurso-card" data-materia="historia" data-tipo="pdf">
+      <h3>Resumen de Historia de México</h3>
+      <p class="materia">Materia: Historia</p>
+      <p class="descripcion">Guía completa de los principales acontecimientos históricos de México, con cronología y análisis.</p>
+      <a href="#" class="btn btn-guinda">Descargar PDF</a>
+    </div>
+
+    <!-- Recurso 25 -->
+    <div class="recurso-card" data-materia="matematicas" data-tipo="video">
+      <h3>Resolución de Integrales</h3>
+      <p class="materia">Materia: Matemáticas</p>
+      <p class="descripcion">Video explicativo de técnicas de integración con ejemplos resueltos paso a paso.</p>
+      <a href="#" class="btn btn-guinda">Ver Video</a>
+    </div>
+
+    <!-- Recurso 26 -->
+    <div class="recurso-card" data-materia="fisica" data-tipo="online">
+      <h3>Simulador de Óptica</h3>
+      <p class="materia">Materia: Física</p>
+      <p class="descripcion">Explora reflexiones, refracciones y lentes en un simulador interactivo online.</p>
+      <a href="#" class="btn btn-guinda">Acceder Online</a>
+    </div>
+
+    <!-- Recurso 27 -->
+    <div class="recurso-card" data-materia="quimica" data-tipo="pdf">
+      <h3>Tabla de Solubilidad y pH</h3>
+      <p class="materia">Materia: Química</p>
+      <p class="descripcion">Tabla de solubilidad de compuestos y guía para calcular el pH de soluciones acuosas.</p>
+      <a href="#" class="btn btn-guinda">Descargar PDF</a>
+    </div>
+
+    <!-- Recurso 28 -->
+    <div class="recurso-card" data-materia="informatica" data-tipo="online">
+      <h3>Simulador de Redes de Computadoras</h3>
+      <p class="materia">Materia: Informática</p>
+      <p class="descripcion">Prácticas de topologías, protocolos y configuración de redes en un entorno virtual seguro.</p>
+      <a href="#" class="btn btn-guinda">Acceder Online</a>
+    </div>
+
+    <!-- Recurso 29 -->
+    <div class="recurso-card" data-materia="biologia" data-tipo="video">
+      <h3>Videos de Microbiología</h3>
+      <p class="materia">Materia: Biología</p>
+      <p class="descripcion">Serie de videos sobre bacterias, virus y procesos de laboratorio de microbiología básica.</p>
+      <a href="#" class="btn btn-guinda">Ver Video</a>
+    </div>
+
+    <!-- Recurso 30 -->
+    <div class="recurso-card" data-materia="historia" data-tipo="online">
+      <h3>Línea del Tiempo Interactiva de la Historia Mundial</h3>
+      <p class="materia">Materia: Historia</p>
+      <p class="descripcion">Recurso interactivo para explorar eventos mundiales importantes desde la prehistoria hasta hoy.</p>
+      <a href="#" class="btn btn-guinda">Acceder Online</a>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- ===== INFO FINAL ===== -->
+  <section class="info-kiosko">
+    <p>
+      Todos los recursos son gratuitos y verificados para estudiantes de nivel medio superior. 
+      Asegúrate de consultar las guías y materiales recomendados para cada materia para complementar tus estudios.
+    </p>
+  </section>
+
+  <!-- ===== SCRIPT DE FILTRO ===== -->
+  <script>
+    const filtroForm = document.querySelector('.filtros-form');
+    const recursosLista = document.getElementById('recursos-lista');
+    const recursos = Array.from(recursosLista.children);
+
+    filtroForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const palabraClave = filtroForm.querySelector('input').value.toLowerCase();
+      const materiaSeleccionada = filtroForm.querySelector('select').value;
+
+      recursos.forEach(r => {
+        const titulo = r.querySelector('h3').textContent.toLowerCase();
+        const descripcion = r.querySelector('.descripcion').textContent.toLowerCase();
+        const materia = r.dataset.materia;
+
+        const coincidePalabra = palabraClave === "" || titulo.includes(palabraClave) || descripcion.includes(palabraClave);
+        const coincideMateria = !materiaSeleccionada || materia === materiaSeleccionada;
+
+        r.style.display = (coincidePalabra && coincideMateria) ? 'block' : 'none';
+      });
+    });
+  </script>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; 2025 FIVEMS - Fundación de Integración Virtual Escolar de Media Superior. Diseñado para el <strong>IPN</strong>.</p>
+    <p>Contacto: <a href="mailto:contacto@sivems.mx">contacto@sivems.mx</a></p>
+  </footer>
+</body>
+</html>
