@@ -1097,3 +1097,9 @@ footer p {
   margin: 0 auto;
   text-align: left;
 }
+
+
+.hero-conocenos {
+  background: linear-gradient(rgba(140, 24, 88, 0.7), rgba(0, 31, 63, 0.7)),
+              url('https://images.unsplash.com/photo-1555066931-4365d14bab8c') center/cover no-repeat;
+}
