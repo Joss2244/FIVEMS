@@ -8,26 +8,32 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- ===== HEADER ===== -->
-  <header>
-    <div class="logo-container">
-      <img src="FIVEMS.jpg" alt="Logo FIVEMS">
-      <div class="logo-text">FIVEMS</div>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="kiosko.html">Kiosko Digital</a></li>
-        <li><a href="asesorias.html">Asesorías</a></li>
-        <li><a href="eventos.html">Eventos</a></li>
-        <li><a href="oportunidades.html">Oportunidades</a></li>
-      </ul>
-    </nav>
-    <div>
-      <a href="registro.html"><button class="btn btn-guinda">Registrarse</button></a>
-      <a href="login.html"><button class="btn btn-guinda">Iniciar Sesión</button></a>
-    </div>
-  </header>
+  <!-- ====== HEADER ====== -->
+<header>
+  <div class="logo-container">
+    <img src="FIVEMS.jpg" alt="Logo FIVEMS">
+    <div class="logo-text">FIVEMS</div>
+  </div>
+  
+  <!-- Botón hamburguesa -->
+
+<nav>
+  <div class="close-menu">×</div> <!-- X para cerrar -->
+  <ul>
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="kiosko.html">Kiosko Digital</a></li>
+    <li><a href="asesorias.html">Asesorías</a></li>
+    <li><a href="eventos.html">Eventos</a></li>
+    <li><a href="oportunidades.html">Oportunidades</a></li>
+  </ul>
+</nav>
+
+
+  <div class="header-buttons">
+    <a href="Registro.html"><button class="btn btn-guinda">Registrarse</button></a>
+    <a href="login.html"><button class="btn btn-guinda">Iniciar Sesión</button></a>
+  </div>
+</header>
 
   <!-- ===== HERO ===== -->
   <section class="hero">
@@ -391,6 +397,22 @@
       v.style.display = (coincidePalabra && coincideTipo && coincideUbicacion) ? 'block' : 'none';
     });
   });
+
+  const menuToggle = document.createElement('div');
+  menuToggle.classList.add('menu-toggle');
+  menuToggle.innerHTML = '&#9776;'; // Icono hamburguesa
+  document.querySelector('header').appendChild(menuToggle);
+
+  const nav = document.querySelector('nav');
+  const closeMenu = document.querySelector('.close-menu');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.add('active');
+  });
+
+  closeMenu.addEventListener('click', () => {
+    nav.classList.remove('active');
+  });
 </script>
 
 
@@ -403,6 +425,7 @@
   </div>
   <p>&copy; 2025 FIVEMS - Fundación de Integración Virtual Escolar de Media Superior.</p>
   <p>Contacto: <a href="mailto:contacto@sivems.mx">contacto@sivems.mx</a></p>
+  
 </footer>
 </body>
 </html>

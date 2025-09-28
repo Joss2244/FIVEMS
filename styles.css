@@ -1164,3 +1164,106 @@ footer p {
 }
 
 
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+/* NAV LATERAL OCULTO */
+#nav-menu {
+  transition: transform 0.3s ease;
+}
+
+#nav-menu ul {
+  display: flex;
+  gap: 30px;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* ===== RESPONSIVE MENÚ ===== */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #nav-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* fuera de pantalla */
+    width: 250px;
+    height: 100%;
+    background-color: #001F3F;
+    padding-top: 80px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    transform: translateX(0);
+  }
+
+  #nav-menu.active {
+    right: 0;
+  }
+
+  nav ul li {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Ocultar botones mientras el menú lateral aparece */
+  .header-buttons {
+    display: none;
+  }
+}
+
+
+/* Botón de cerrar menú lateral */
+nav .close-menu {
+  display: none; /* solo visible en móvil */
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Menú lateral (mobile) */
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    right: -300px; /* fuera de la pantalla inicialmente */
+    width: 250px;
+    height: 100%;
+    background-color: #001F3F;
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px; /* espacio debajo del header */
+    transition: 0.3s;
+    z-index: 2000;
+  }
+
+  nav.active {
+    right: 0; /* cuando esté activo */
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 25px;
+    padding-left: 20px;
+  }
+
+  nav .close-menu {
+    display: block;
+  }
+}
